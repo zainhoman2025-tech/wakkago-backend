@@ -14,16 +14,18 @@ return new class extends Migration
             ->enum('category', [
                 'bike', 
                 'keke_napep',
+                'cargo_tricycle', 
                 'small_car', 
                 'space_bus', 
-                'van', 
                 'mini_bus', 
+                'van', 
                 'mini_truck', 
                 'truck', 
                 'trailer', 
+                'tanker',
                 'crane',
                 'bulldozer',
-                'tanker'
+                'forklift'
             ]);
             ->string('plate_number');
             ->json('model_details')->nullable();
