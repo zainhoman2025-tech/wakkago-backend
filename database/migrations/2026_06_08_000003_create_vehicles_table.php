@@ -11,7 +11,20 @@ return new class extends Migration
         Schema::create('vehicles', function (Blueprint ) {
             ->uuid('id')->primary();
             ->foreignUuid('provider_id')->constrained('providers')->onDelete('cascade');
-            ->enum('category', ['bike', 'mini_truck', 'trailer', 'crane']);
+            ->enum('category', [
+                'bike', 
+                'keke_napep',
+                'small_car', 
+                'space_bus', 
+                'van', 
+                'mini_bus', 
+                'mini_truck', 
+                'truck', 
+                'trailer', 
+                'crane',
+                'bulldozer',
+                'tanker'
+            ]);
             ->string('plate_number');
             ->json('model_details')->nullable();
             ->boolean('is_available')->default(true);
